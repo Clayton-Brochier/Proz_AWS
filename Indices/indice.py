@@ -46,7 +46,40 @@ lista_num = [2, 45, 65, 78, 126, 987, 457, 345, 679, 107, 2345, 452, 3, 34, 560]
 
 for i in range(len(lista_num)):
     print(lista_num[i])
-    
 
+#Alterar dados usando índices
+'''Sabendo que ‘maçã’, nesse caso está na primeira posição do array, e que os índices do array começam a partir do número 0, 
+podemos “acessar” o item na posição [0] e usar o operador de atribuição ‘=’ para substituir o valor atual:'''
+
+lista_frutas[0] = 'melancia'
+print(lista_frutas) #saída: ['melacia', 'banana', 'pera']
+    
+'''Imagina agora que demos uma olhada na nossa lista novamente e percebemos que também não gostamos mais de bananas nem de peras. 
+Poderíamos realizar o passo anterior mais duas vezes, mas Python nos permite simplificar um pouco esse processo acessando 
+mais de um item por vez, separando eles por vírgulas e usando um único operador de atribuição:'''
+
+lista_frutas[1], lista_frutas[2] = 'morango', 'abacaxi'
+print(lista_frutas) #saída: ['melancia', 'morango', 'abacaxi']
+
+'''Podemos inclusive atribuir o valor de um elemento do array, a outro elemento do mesmo array! 
+Imagine que gostamos tanto de melancia, que queremos que os dois primeiros itens da nossa lista sejam ‘melancia’. 
+Podemos fazer isso da seguinte forma:'''
+
+lista_frutas[1] = lista_frutas[0]
+print(lista_frutas) #saída: ['melancia', 'melancia', 'abacaxi']
+
+#Adicionar e remover elementos
+'''função append(), que em inglês significa “anexar” ou “acrescentar”. Para usá-la basta escrever o nome do array ao qual queremos adicionar 
+um item, seguido de um ponto ‘.’, o nome da função, e o item a ser adicionado dentro dos parênteses ao final do vetor:'''
+
+lista_frutas.append('kiwi')
+print(lista_frutas) #saída:['melancia', 'melancia', 'abacaxi', 'kiwi']
+
+'''Se quisermos remover o elemento que acabamos de adicionar? A função pop() vem para nos ajudar a resolver esse problema. 
+Usamos ele da mesma forma que a função append(), porém, não precisamos passar nenhum argumento dentro dos parênteses. 
+Assim, ele entenderá que o item a ser removido do array é o último.'''
+
+lista_frutas.pop()
+print(lista_frutas) #saída: ['melancia', 'melancia', 'abacaxi']
 
 
